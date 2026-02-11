@@ -1,0 +1,10 @@
+# Snippet spécifique au vhost rally-logistique.cloud
+# Inclus dans le server {} pour ce domaine uniquement
+
+# Headers de sécurité optionnels
+add_header X-Frame-Options "SAMEORIGIN" always;
+add_header X-Content-Type-Options "nosniff" always;
+add_header X-XSS-Protection "1; mode=block" always;
+
+# Taille max body (ajuster si upload)
+client_max_body_size 10M;
